@@ -11,12 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('owner', function (Blueprint $table) {
+        Schema::create('inspectors', function (Blueprint $table) {
             $table->id();
             $table->string("name", 45);
-            $table->string("contace_phone", 45);
+          
+            
             $table->timestamps();
         });
+        DB::table("inspectors")->insert([
+          [
+            "name" => "Ian Vincent Madayag"
+            ],
+                      [
+            "name" => "Raven Añabieza"
+            ],
+                                  [
+            "name" => "Johnrey Mendiola"
+            ]
+          ]);
     }
 
     /**
@@ -24,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('owner');
+        Schema::dropIfExists('inspectors');
     }
 };
