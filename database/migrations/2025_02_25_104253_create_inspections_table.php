@@ -45,21 +45,21 @@ DB::table("inspections")->insert([
     "restaurant_id" => 1,
     "violation_id" => 1,
     "time" => "10:00:00",
-    "date" => "2025-02-25"
+    "date" => "2025-03-31"
   ],
   [
     "inspector_id" => 2,
     "restaurant_id" => 2,
     "violation_id" => 2,
     "time" => "11:00:00",
-    "date" => "2025-02-25"
+    "date" => "2025-04-04"
   ],
   [
     "inspector_id" => 3,
     "restaurant_id" => 3,
     "violation_id" => 3,
     "time" => "12:00:00",
-    "date" => "2025-02-25"
+    "date" => "2025-04-07"
   ],
 ]);
 

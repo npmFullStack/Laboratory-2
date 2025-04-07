@@ -89,4 +89,18 @@ class AdminController extends Controller
 
     return response()->json(["success" => true, "level4" => $inspections], 200);
   }
+
+  public function viewDashboard()
+  {
+    return view("pages.dashboard");
+  }
+
+  public function viewRestaurant()
+  {
+    $inspections = Inspection::with([      "violation",
+      "restaurant.owner",
+      "inspector",])->get();
+
+    return view("restaurant.restaurant", compact("inspections"));
+  }
 }

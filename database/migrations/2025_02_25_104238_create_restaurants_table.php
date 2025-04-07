@@ -13,9 +13,8 @@ return new class extends Migration {
     Schema::create("restaurants", function (Blueprint $table) {
       $table->id();
       $table->string("name", 45);
-      $table->string("address", 45);
+      $table->string("address", 255);
       $table->string("phone_number", 15);
-
 
       $table->unsignedBigInteger("owner_id");
       $table->timestamps();
@@ -29,26 +28,26 @@ return new class extends Migration {
     });
 
     DB::table("restaurants")->insert([
-  [
-    "name" => "Jollibee",
-    "address" => "City Mall Iponan",
-    "phone_number" => "1234567890",
-    "owner_id" => 1,
-  ],
-  [
-    "name" => "Chowking",
-    "address" => "City Mall Iponan",
-    "phone_number" => "2345678901",
-    "owner_id" => 2,
-  ],
-  [
-    "name" => "Mang Inasal",
-    "address" => "City Mall Iponan",
-    "phone_number" => "3456789012",
-    "owner_id" => 3,
-  ]
-]);
-
+      [
+        "name" => "Jollibee",
+        "address" =>
+          "Don Apolinar Velez Street, Cagayan de Oro, Misamis Oriental",
+        "phone_number" => "0998292809",
+        "owner_id" => 1,
+      ],
+      [
+        "name" => "McDonald's",
+        "address" => "J.R. Borja St, Cagayan de Oro, Misamis Oriental",
+        "phone_number" => "0992789163",
+        "owner_id" => 2,
+      ],
+      [
+        "name" => "Panagatan",
+        "address" => "Panagatan, Zone 3, Opol, Misamis Oriental",
+        "phone_number" => "0982791738",
+        "owner_id" => 3,
+      ],
+    ]);
   }
 
   /**
